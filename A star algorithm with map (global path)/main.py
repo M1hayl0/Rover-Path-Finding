@@ -1,6 +1,7 @@
 import numpy as np
 import queue
 import time
+import matplotlib.pyplot as plt
 
 
 def printTime(func):
@@ -23,6 +24,24 @@ def checkCoordinates(x, y, mapMatrix, roverDist):  # roverDist - distance from c
             all([np.isfinite(z) for z in mapMatrix[x - roverDist:x + roverDist + 1, y - roverDist:y + roverDist + 1].reshape(-1)])):
         return True
     return False
+
+
+def visualizePath(matrix, path, start, end):
+    plt.imshow(matrix, cmap='terrain', origin='upper')
+
+    pathX, pathY = zip(*path)
+
+    plt.plot(pathY, pathX, color='red', linestyle='-', linewidth=1, marker='o', markersize=3, markerfacecolor='blue', markeredgecolor='blue')
+    plt.plot(start[1], start[0], marker='s', markersize=10, markerfacecolor='green', markeredgecolor='green')
+    plt.plot(end[1], end[0], marker='s', markersize=10, markerfacecolor='red', markeredgecolor='red')
+
+    plt.title('Global Path')
+    plt.xlabel('Column')
+    plt.ylabel('Row')
+    plt.colorbar(label='Terrain Height')
+    plt.grid(visible=False)
+    plt.savefig(f"tests/[{start[0]},{start[1]}]-[{end[0]},{end[1]}].png")
+    plt.show()
 
 
 class GlobalPath:
@@ -86,8 +105,8 @@ class GlobalPath:
         return path
 
 
-def test(points):
-    mapMatrix = np.load("map.npy")
+def test(mapName, points):
+    mapMatrix = np.load(f"{mapName}.npy")
     globalPath = GlobalPath(mapMatrix, 4, 0.33, 1, 0.05)
 
     for i in range(len(points)):
@@ -96,7 +115,10 @@ def test(points):
             print("Wrong coordinates")
             break
 
-        for j in range(i + 1, len(points)):
+        for j in range(len(points)):
+            if i == j:
+                continue
+
             end = points[j]
             if not checkCoordinates(*end, globalPath.mapMatrix, globalPath.roverDist):
                 print("Wrong coordinates")
@@ -104,15 +126,19 @@ def test(points):
 
             path = globalPath.aStar(start, end)
 
-            mapMatrixWithPath = np.load("map.npy")
+            mapMatrixWithPath = np.load(f"{mapName}.npy")
+            wholePath = []
             if path:
                 for x, y in path:
                     for dx in range(-globalPath.roverDist, globalPath.roverDist + 1):
                         for dy in range(-globalPath.roverDist, globalPath.roverDist + 1):
                             mapMatrixWithPath[x + dx, y + dy] = -np.inf
+                            wholePath.append([x + dx, y + dy])
 
-            np.savetxt(f"tests/map{i}{j}.csv", mapMatrixWithPath, delimiter=",")
+            visualizePath(mapMatrixWithPath, wholePath, start, end)
 
 
 if __name__ == "__main__":
-    test([[145, 80], [20, 10], [120, 20], [85, 30], [40, 80]])
+    # test("oldMap", [[145, 80], [20, 10], [120, 20], [85, 30], [40, 80]])
+    newMapPoints = np.load("newMapPoints.npy")
+    test("newMap", newMapPoints.tolist())
