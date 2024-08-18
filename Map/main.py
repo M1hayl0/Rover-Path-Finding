@@ -25,10 +25,11 @@ def filterArray(pointsArray):
 def pointsArrayToMapMatrix(pointsArray, startEndPoints):
     xMin, xMax, yMin, yMax = np.min(pointsArray[:, 0]), np.max(pointsArray[:, 0]), np.min(pointsArray[:, 1]), np.max(pointsArray[:, 1])
     pointsDict = {}
+    mul = 6
     for point in pointsArray:
         x, y, z = point
-        # -xMin to set the interval from 0, *3 so the map is more precise
-        xy = (round((x - xMin) * 3), round((y - yMin) * 3))
+        # -xMin to set the interval from 0, *mul so the map is more precise
+        xy = (round((x - xMin) * mul), round((y - yMin) * mul))
         if xy in pointsDict:
             pointsDict[xy].append(z)
         else:
@@ -39,26 +40,26 @@ def pointsArrayToMapMatrix(pointsArray, startEndPoints):
         if len(value) > 1:
             pointsDict[key] = [sum(value)/len(value)]
 
-    # the coordinates are in meters, so the spacing between fields in a matrix is going to be 0.33m because of multiplication with 3
-    mapMatrix = np.full((round((xMax - xMin) * 3 + 1), round((yMax - yMin) * 3 + 1)), np.inf)
+    # the coordinates are in meters, so the spacing between fields in a matrix is going to be 1/mul meters because of multiplication with mul
+    mapMatrix = np.full((round((xMax - xMin) * mul + 1), round((yMax - yMin) * mul + 1)), np.inf)
 
     zMin = min([value[0] for value in pointsDict.values()])
     for (x, y), z in pointsDict.items():
         mapMatrix[x, y] = z[0] - zMin
 
     for point in startEndPoints:
-        point[0] = round((point[0] - xMin) * 3)
-        point[1] = round((point[1] - yMin) * 3)
+        point[0] = round((point[0] - xMin) * mul)
+        point[1] = round((point[1] - yMin) * mul)
 
     return mapMatrix
 
 
-def visualizeMap(matrix):
-    plt.imshow(matrix, cmap='terrain', origin='upper')
-    plt.title('Global Path')
-    plt.xlabel('Column')
-    plt.ylabel('Row')
-    plt.colorbar(label='Terrain Height')
+def visualizeMap(matrix, name):
+    plt.imshow(matrix, cmap="terrain", origin="upper")
+    plt.title(name)
+    plt.xlabel("Column")
+    plt.ylabel("Row")
+    plt.colorbar(label="Terrain Height")
     plt.grid(visible=False)
     plt.show()
 
@@ -71,7 +72,20 @@ def main(mapName, startEndPoints):
     np.save(f"{mapName}.npy", mapMatrix)
     if mapName == "newMap":
         np.save(f"{mapName}Points.npy", startEndPoints)
-    visualizeMap(mapMatrix)
+    visualizeMap(mapMatrix, "Map")
+
+    if mapName == "newMap":
+        for i in range(len(mapMatrix)):
+            for j in range(len(mapMatrix[i])):
+                if mapMatrix[i][j] < 0.4:
+                    mapMatrix[i][j] = 0
+                elif mapMatrix[i][j] < 0.7:
+                    mapMatrix[i][j] = 0.5
+                else:
+                    mapMatrix[i][j] = 1
+
+        np.save(f"{mapName}Layers.npy", mapMatrix)
+        visualizeMap(mapMatrix, "Map Layers")
 
 
 if __name__ == "__main__":

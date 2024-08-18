@@ -20,9 +20,9 @@ def generateMatrix(matrixSize, probabilityForZero=0.7):
 
 
 class LocalPath:
-    def __init__(self, globalPath, mapMatrix, steps, roverDist):
+    def __init__(self, globalPath, mapMatrixLayers, steps, roverDist):
         self.globalPath = globalPath
-        self.mapMatrix = generateMatrix([mapMatrix.shape[0], mapMatrix.shape[1]], 0.9)  # TODO: change this later when real input is provided by the rest of the team, this matrix should be changed every time algorithm is called
+        self.mapMatrixLayers = mapMatrixLayers
         self.steps = steps
         self.roverDist = roverDist
 
@@ -39,7 +39,7 @@ class LocalPath:
             newX = path[-1][0] + dx
             newY = path[-1][1] + dy
             newPosition = [newX, newY]
-            if checkCoordinates(round(newPosition[0]), round(newPosition[1]), self.mapMatrix, self.roverDist):
+            if checkCoordinates(round(newPosition[0]), round(newPosition[1]), self.mapMatrixLayers, self.roverDist):
                 path.append(newPosition)
 
             direction += turnAngle
@@ -79,15 +79,17 @@ class LocalPath:
 
     @printTime
     def dwa(self, roverPosition, roverOrientation):
-        possibleDirections = [roverOrientation + d for d in [-40, -25, -10, 0, 10, 25, 40]]
+        possibleDirections = [roverOrientation + d for d in [-25, -15, -5, 0, 5, 15, 25]]
         localPaths = self.generatePaths(roverPosition, roverOrientation, possibleDirections)
         localPathsCost = [0 for _ in range(len(localPaths))]
 
         for i in range(len(localPaths)):
             localPathsCost[i] += self.distanceFromGlobalPath(localPaths[i][0])
             for j in range(len(localPaths[i][0])):
-                if self.mapMatrix[localPaths[i][0][j][0]][localPaths[i][0][j][1]] == 1:
-                    localPathsCost[i] += 0.5  # TODO: change cost calculation after real input is provided
+                if self.mapMatrixLayers[localPaths[i][0][j][0]][localPaths[i][0][j][1]] == 1:
+                    localPathsCost[i] += 0.3
+                elif self.mapMatrixLayers[localPaths[i][0][j][0]][localPaths[i][0][j][1]] == 0.5:
+                    localPathsCost[i] += 0.1
 
         chosenLocalPath = []
         minCost = np.inf

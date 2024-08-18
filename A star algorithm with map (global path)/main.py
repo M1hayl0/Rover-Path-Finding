@@ -26,21 +26,21 @@ def checkCoordinates(x, y, mapMatrix, roverDist):  # roverDist - distance from c
     return False
 
 
-def visualizePath(matrix, path, start, end):
-    plt.imshow(matrix, cmap='terrain', origin='upper')
+def visualizePath(matrix, path, start, end, startPoint, endPoint):
+    plt.imshow(matrix, cmap="terrain", origin="upper")
 
     pathX, pathY = zip(*path)
 
-    plt.plot(pathY, pathX, color='red', linestyle='-', linewidth=1, marker='o', markersize=3, markerfacecolor='blue', markeredgecolor='blue')
-    plt.plot(start[1], start[0], marker='s', markersize=10, markerfacecolor='green', markeredgecolor='green')
-    plt.plot(end[1], end[0], marker='s', markersize=10, markerfacecolor='red', markeredgecolor='red')
+    plt.plot(pathY, pathX, color="red", linestyle="-", linewidth=1, marker="o", markersize=3, markerfacecolor="blue", markeredgecolor="blue")
+    plt.plot(start[1], start[0], marker="s", markersize=10, markerfacecolor="green", markeredgecolor="green")
+    plt.plot(end[1], end[0], marker="s", markersize=10, markerfacecolor="red", markeredgecolor="red")
 
-    plt.title('Global Path')
-    plt.xlabel('Column')
-    plt.ylabel('Row')
-    plt.colorbar(label='Terrain Height')
+    plt.title(f"Global Path {startPoint}-{endPoint}")
+    plt.xlabel("Column")
+    plt.ylabel("Row")
+    plt.colorbar(label="Terrain Height")
     plt.grid(visible=False)
-    plt.savefig(f"tests/[{start[0]},{start[1]}]-[{end[0]},{end[1]}].png")
+    plt.savefig(f"tests/{startPoint}-{endPoint}.png")
     plt.show()
 
 
@@ -107,7 +107,8 @@ class GlobalPath:
 
 def test(mapName, points):
     mapMatrix = np.load(f"{mapName}.npy")
-    globalPath = GlobalPath(mapMatrix, 4, 0.33, 1, 0.05)
+    globalPath = GlobalPath(mapMatrix, 8, 0.167, 1, 0.05)
+    pointsNames = ["S4", "W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9"]
 
     for i in range(len(points)):
         start = points[i]
@@ -126,16 +127,14 @@ def test(mapName, points):
 
             path = globalPath.aStar(start, end)
 
-            mapMatrixWithPath = np.load(f"{mapName}.npy")
             wholePath = []
             if path:
                 for x, y in path:
                     for dx in range(-globalPath.roverDist, globalPath.roverDist + 1):
                         for dy in range(-globalPath.roverDist, globalPath.roverDist + 1):
-                            mapMatrixWithPath[x + dx, y + dy] = -np.inf
                             wholePath.append([x + dx, y + dy])
 
-            visualizePath(mapMatrixWithPath, wholePath, start, end)
+            visualizePath(mapMatrix, wholePath, start, end, pointsNames[i], pointsNames[j])
 
 
 if __name__ == "__main__":
