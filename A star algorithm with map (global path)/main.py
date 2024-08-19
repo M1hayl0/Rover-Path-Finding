@@ -45,9 +45,10 @@ def visualizePath(matrix, path, start, end, startPoint, endPoint):
 
 
 class GlobalPath:
-    def __init__(self, mapMatrix, roverSize, distanceBetweenFields, roverMaxSlope, slopeThresholdIncrease):
+    def __init__(self, mapMatrix, mapMatrixLayers, roverSize, distanceBetweenFields, roverMaxSlope, slopeThresholdIncrease):
         self.distanceBetweenFields = distanceBetweenFields  # in meters
         self.mapMatrix = mapMatrix
+        self.mapMatrixLayers = mapMatrixLayers
         self.roverSize = roverSize if roverSize % 2 else roverSize + 1
         self.roverDist = (self.roverSize - 1) // 2  # distance from center to edge of the rover
         self.roverMaxSlope = roverMaxSlope
@@ -75,7 +76,7 @@ class GlobalPath:
 
     def aStarWithSlopeThreshold(self, start, end, searchDepth, slopeThreshold):
         pq = queue.PriorityQueue()
-        pq.put((0, start, [start]))  # distance, node, path
+        pq.put((0, start, [start]))  # cost, node, path
         visited = set()
         visited.add((start[0], start[1]))
         neighbours = [[-1, -1], [-1, 0], [-1, 1], [0, 1], [1, 1], [1, 0], [1, -1], [0, -1]]
@@ -90,11 +91,16 @@ class GlobalPath:
                 if checkCoordinates(x, y, self.mapMatrix, self.roverDist) and (x, y) not in visited:
                     slope = self.calculateSlope(node, [x, y], searchDepth)
                     if abs(slope) < slopeThreshold:
-                        pq.put((len(path) + euclideanDistance([x, y], end), [x, y], path + [[x, y]]))
+                        cost = len(path) + euclideanDistance([x, y], end)
+                        addCost = 0
+                        for point in self.mapMatrixLayers[x - self.roverDist:x + self.roverDist + 1, y - self.roverDist:y + self.roverDist + 1].reshape(-1):
+                            addCost += cost * point / pow(self.roverSize, 2)
+                        cost += addCost
+                        pq.put((cost, [x, y], path + [[x, y]]))
                         visited.add((x, y))
 
     @printTime
-    def aStar(self, start, end, searchDepth=6, initialSlopeThreshold=0.05):
+    def aStar(self, start, end, searchDepth=4, initialSlopeThreshold=0.05):
         path = None
         currentSlopeThreshold = initialSlopeThreshold
         while currentSlopeThreshold < self.roverMaxSlope:
@@ -107,7 +113,8 @@ class GlobalPath:
 
 def test(mapName, points):
     mapMatrix = np.load(f"{mapName}.npy")
-    globalPath = GlobalPath(mapMatrix, 8, 0.167, 1, 0.05)
+    mapMatrixLayers = np.load(f"{mapName}Layers.npy")
+    globalPath = GlobalPath(mapMatrix, mapMatrixLayers, 8, 0.167, 1, 0.05)
     pointsNames = ["S4", "W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9"]
 
     for i in range(len(points)):
