@@ -142,6 +142,7 @@ def test(mapName, points):
                             wholePath.append([x + dx, y + dy])
 
             visualizePath(mapMatrix, wholePath, start, end, pointsNames[i], pointsNames[j])
+            np.save(f"tests npy/{pointsNames[i]}-{pointsNames[j]}.npy", path)
 
 
 if __name__ == "__main__":

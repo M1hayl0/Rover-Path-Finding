@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="67c39171-ec49-42d8-98f8-fa68c7d32b8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/A star + dwa (global and local path).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/common_functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/global_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/local_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/newMap.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/newMapLayers.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/newMapPoints.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/oldMap.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/S4-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W1-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W2-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W3-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W4-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W5-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W6-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W7-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W8-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star + dwa (global and local path)/tests/W9-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/A star algorithm with map 2 (global path).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/newMap.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/newMapPoints.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/oldMap.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/S4-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W1-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W2-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W3-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W4-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W5-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W6-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W7-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W8-W9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-S4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm with map 2 (global path)/tests/W9-W8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/A star algorithm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../A star algorithm/result.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/Dynamic Window Approach (local path).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dynamic Window Approach (local path)/result.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2kh2x3PFgYexXZY7RtpDiWfXtUu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Programiranje/2021-2025 (faks)/Argo/Path finding/Map",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Dynamic Window Approach (local path)" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67c39171-ec49-42d8-98f8-fa68c7d32b8e" name="Changes" comment="" />
+      <created>1723721731380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723721731380</updated>
+      <workItem from="1723721733277" duration="126000" />
+      <workItem from="1724095086516" duration="57000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Dynamic_Window_Approach__local_path_$main.coverage" NAME="main Coverage Results" MODIFIED="1724095108287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
