@@ -22,7 +22,7 @@ def filterArray(pointsArray):
     return np.array(filteredPoints)
 
 
-def pointsArrayToMapMatrix(pointsArray, startEndPoints):
+def pointsArrayToMapMatrix(pointsArray, startEndPoints, arucoMarkers):
     xMin, xMax, yMin, yMax = np.min(pointsArray[:, 0]), np.max(pointsArray[:, 0]), np.min(pointsArray[:, 1]), np.max(pointsArray[:, 1])
     pointsDict = {}
     mul = 6
@@ -51,6 +51,10 @@ def pointsArrayToMapMatrix(pointsArray, startEndPoints):
         point[0] = round((point[0] - xMin) * mul)
         point[1] = round((point[1] - yMin) * mul)
 
+    for point in arucoMarkers:
+        point[0] = round((point[0] - xMin) * mul)
+        point[1] = round((point[1] - yMin) * mul)
+
     return mapMatrix
 
 
@@ -64,11 +68,11 @@ def visualizeMap(matrix, name):
     plt.show()
 
 
-def main(mapName, startEndPoints):
+def main(mapName, startEndPoints, arucoMarkers):
     pointsArray = plyToArray(f"{mapName}.ply")
     if mapName == "newMap":
         pointsArray = filterArray(pointsArray)
-    mapMatrix = pointsArrayToMapMatrix(pointsArray, startEndPoints)
+    mapMatrix = pointsArrayToMapMatrix(pointsArray, startEndPoints, arucoMarkers)
     np.save(f"{mapName}.npy", mapMatrix)
     if mapName == "newMap":
         np.save(f"{mapName}Points.npy", startEndPoints)
@@ -83,6 +87,11 @@ def main(mapName, startEndPoints):
                     mapMatrix[i][j] = 0.5
                 else:
                     mapMatrix[i][j] = 1
+
+        for point in arucoMarkers:
+            for i in range(point[0] - 4, point[0] + 5):
+                for j in range(point[1] - 4, point[1] + 5):
+                    mapMatrix[i][j] = 3
 
         np.save(f"{mapName}Layers.npy", mapMatrix)
         visualizeMap(mapMatrix, "Map Layers")
@@ -100,6 +109,27 @@ if __name__ == "__main__":
         [0.211, 9.454],  # W6
         [0.83, 19.867],  # W7
         [9.082, 23.409],  # W8
-        [3.435, 16.031],  # W9
+        # [3.435, 16.031]  # W9
+        [1.49, 14.13]  # W9
     ]
-    main("newMap", points)
+
+    aruco = [
+        [5.96, 2.009],  # L1
+        [-3.632, 7.469],  # L2
+        [2.464, 5.984],  # L3
+        [4.163, 12.066],  # L4
+        [-1.854, 15.088],  # L5
+        [-1.73, 22.246],  # L6
+        [3.205, 22.268],  # L7
+        [6.863, 26.711],  # L8
+        [7.905, 21.371],  # L9
+        [3.876, 18.039],  # L10
+        [6.598, 14.024],  # L11
+        [11.656, 13.19],  # L12
+        [6.086, 8.967],  # L13
+        [13.864, 6.67],  # L14
+        [13.804, 1.249],  # L15
+        [3.3, 9.4]  # stone
+    ]
+
+    main("newMap", points, aruco)
